@@ -1,18 +1,20 @@
 from books_sdk import get_book_by_id, get_author
 
-get_author()
 # print(get_author(get_book_by_id(1, 'AAECTkuGjWo1Imwr-_6UrN-nzbo89sd3WSM')))
-
+print(get_book_by_id(1, 'AAECTkuGjWo1Imwr-_6UrN-nzbo89sd3WSM'))
 # Гипотеза 1: Неправильные скобки
-# Способ проверки: методом клика пройтись по какой скобке
-# Установленный факт: Все скобки соответствуют
+# Способ проверки: методом клика пройтись по каждой скобке
+# Установленный факт: Все скобки парные и соответствуют местоположению.
 # Вывод: Гипотеза неверна
 
 # Гипотеза 2: Ошибка во вложенной функции
 # Способ проверки: Запустить вложенную функцию отдельно от внешней
-# Код для проверки: ...
-# Установленный факт: ...
-# Вывод: ...
+# Код для проверки: print(get_book_by_id(1, 'AAECTkuGjWo1Imwr-_6UrN-nzbo89sd3WSM'))
+# Установленный факт: 
+#File "c:\Users\Антон\Documents\GitHub\Debug_lessons\lesson_1\books_sdk.py", line 23, in get_book_by_id
+#     raise TokenError(response.text)
+# books_sdk.TokenError: bad token!
+# Вывод: Искать ошибку во вложенной функции get_book_by_id()
 
 # Гипотеза 3: Проблема в типе данных, '1' должно быть числом
 # Способ проверки: ...
